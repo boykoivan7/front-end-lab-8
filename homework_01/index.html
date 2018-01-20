@@ -38,11 +38,11 @@
 					</ul>
 				</li>
 			</ul>
-			<ol type="1">
+			<ol>
 				<li><h4>Heading 4</h4>
-					<ol type="A">
+					<ol>
 						<li><h5>Heading 5</h5>
-							<ol type="i">
+							<ol>
 								<li><h6>Heading 6</h6></li>
 							</ol>
 						</li>
@@ -71,29 +71,35 @@
 			</details>
 			
 			<hr>
+			
 			<h2 id="table">Table</h2>
 			<table>
-				<tr>
-					<td>Elements</td>
-					<td>Elements</td>
-					<td>Elements</td>
-				</tr>
-				<tr>
-					<td><strong>Strong</strong></td>
-					<td>H<sub>2</sub>O</td>
-					<td><a href="#">Test link</a></td>
-				</tr>
-				<tr>
-					<td><em>Italic</em></td>
-					<td><u>Underline.</u></td>
-					<td><del>Delete</del></td>
-				</tr>
-				<tr>
-					<td><abbr>Abbreviation</abbr></td>
-					<td>5<sup>3</sup>=125</td>
-					<td><ins>Inserted</ins></td>
-				</tr>
-			</table>
+				<thead>
+					<tr>
+						<th>Elements</th>
+						<th>Elements</th>
+						<th>Elements</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr>
+						<td><strong>strong</strong></td>
+						<td>H<sub>2</sub>O</td>
+						<td><a href="#">test link</a></td>
+					</tr>
+					<tr>
+						<td><em>Italic</em></td>
+						<td><u>Underline.</u></td>
+						<td><del>delete</del></td>
+					</tr>
+					<tr>
+						<td><abbr>Abbreviation</abbr></td>
+						<td>5<sup>3</sup> = 125</td>
+						<td><ins>inserted</ins></td>
+					</tr>
+				</tbody>
+            </table>
 			
 			<hr>
 			<h2 id="text_formats">Text formats</h2>
@@ -114,7 +120,8 @@ both           spaces and
 			</pre>
 			
 			<h3>Code</h3>
-			<pre><code>
+			<pre>
+				<code>
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -122,15 +129,17 @@ both           spaces and
   grid-auto-rows: minmax(100px, auto);
 }
 
-			</code></pre>
+				</code>
+			</pre>
 			<hr>
 			<h2 id="blockquotes">Blockquotes</h2>
 
 			<p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
 
 			<blockquote>
-			Technology is nothing. What's important is that you have a faith in people, that they're basically good and smart, and if you give them tools, they'll do wonderful things with them.
-			<p><a href="http://www.apple.com">Steve Jobs</a></p>
+			<p>Technology is nothing. What's important is that you have a faith in people, that they're basically good and smart, and if you give them tools, they'll do wonderful things with them.
+			<br>
+			<a href="http://www.apple.com">Steve Jobs</a></p>
 			</blockquote>
 
 			<p hidden>And here’s a bit of trailing text.</p>
