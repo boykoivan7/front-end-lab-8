@@ -382,7 +382,7 @@ write your code here
 	}
 	
 	/*task 8 text in <p> vertical space and some free space first line*/
-	.tm-team-description-container p {
+	section:nth-child(2) .tm-team-description-container p {
 		text-indent: 25px;
 		line-height: 29px;
 	}
