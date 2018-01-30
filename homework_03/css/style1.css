@@ -101,7 +101,8 @@ a {
 table {
   margin-bottom: 64px; }
   table caption {
-    text-align: right; }
+    text-align: right;
+    color: #000;}
   table tr th {
     background-color: #e0e0e0;
     padding: 10px 10px 10px 20px;
