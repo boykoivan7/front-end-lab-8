@@ -1,0 +1,394 @@
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+    text-decoration: none;
+}
+strong {
+    font-weight: 700;
+}
+
+/* MY CODE */
+body{
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    
+}
+header {
+    box-sizing: border-box;
+    padding-top: 46px;
+    height: 740px;
+    background: #5b5c58 url("../img/apples.jpg") center;
+    background-size: cover;
+    color: white;
+}
+nav{
+    float:right;
+    font-size: 14px;
+    margin-right: 55px;
+}
+header .container a.title-left {
+    color: #fff;
+    padding: 14px 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+header .container nav ul{
+    font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+header .container nav ul li{
+    float: left;
+  padding: 0 10px 14px 10px;
+  margin-left: 45px;
+}
+header .container nav ul li:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+header .container nav ul li a{
+    color: #fff;
+}
+
+header .container nav ul li.active{
+    border-bottom: 2px solid #b7c8d9;
+}
+
+header .container .main-title-block {
+    text-align: center;
+}
+header .container .main-title-block h1{
+    font-size: 49px;
+    text-transform: uppercase;
+    margin-top:216px;
+    margin-bottom: 20px;
+    letter-spacing: 9px;
+}
+
+header .container .main-title-block h1 #amp {
+    font-size: 96px;
+}
+header .container .main-title-block h1 #tm {
+    font-size: 23px;
+    vertical-align: super;
+}
+
+header .container .main-title-block p{
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 0.2px;
+}
+header .container .main-title-block button{
+    margin-top: 177px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 22px 78px;
+    border: 2px solid #fff;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+header .container .main-title-block button:hover{
+    background: rgba(164, 164, 164, 0.6);
+}
+header .container .main-title-block button:active{
+    background: rgba(51, 51, 51, 0.6);
+}
+
+
+section:first-of-type {
+    
+    background: #fff;
+}
+section:first-of-type .container .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10.3% 0 11.4% 0;
+
+}
+section:first-of-type .container .row p{
+    width: 48%;
+    
+}
+section:first-of-type .container .row p:first-child {
+    font-size: 22px;
+    line-height: 30px;
+    
+}
+section:first-of-type .container .row p:last-child {
+    line-height: 20px;
+    font-size: 14px;
+}
+
+section:nth-of-type(2) {
+    padding-top: 140px;
+    padding-bottom: 180px;
+    background: #f3f3f3;
+}
+
+section:nth-of-type(2) h2 {
+    padding-top: 7px;
+    padding-bottom: 89px;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+section:nth-of-type(2) .arlicles-block div .row img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+
+section:nth-of-type(2) .arlicles-block .row div{
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    border: 1px solid #fff;
+}
+
+section:nth-of-type(2) .arlicles-block .row div span.article-like{
+    position: absolute;
+    top: 19px;
+    right: 19px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+section:nth-of-type(2) .arlicles-block .row div span.article-description{
+    width: 100%;
+    position: absolute;
+    color: #fff;
+
+    left:35px;
+    bottom: 29px;
+}
+
+section:nth-of-type(2) .arlicles-block .row .big-block{
+    width: 66%;
+}
+section:nth-of-type(2) .arlicles-block .row .small-block{
+    width: 31.5%;
+}
+section:nth-of-type(2) .arlicles-block .row div:first-child{
+    margin-right: 2.5%;
+}
+
+section:nth-of-type(2) .arlicles-block .row:first-child div{
+    margin-bottom: 2.5%;
+}
+
+section:nth-of-type(2) .arlicles-block row::after{
+    display:block;
+    content: "";
+    clear:both; 
+
+}
+section:nth-of-type(2) .arlicles-block::after{
+    display:block;
+    content: "";
+    clear:both;
+}
+
+section:nth-of-type(2) .subscribe-block {
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    margin-top: 90px;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 70px 100px;
+}
+
+section:nth-of-type(2) .subscribe-block p{
+    font-size: 24px;
+  }
+
+section:nth-of-type(2) .subscribe-block form{
+    width: 61.85%;
+    margin: 0 0 0 1%;
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+}
+
+section:nth-of-type(2) .subscribe-block form input{
+    width: 71.5%;
+    box-sizing: border-box;
+    padding: 22px 29px;
+    background: #f3f3f3;
+    border: 1px solid #343638;
+    letter-spacing: 0.85px;
+}
+section:nth-of-type(2) .subscribe-block form button{
+    width: 28.5%;
+    box-sizing: border-box;
+    padding: 22px 0px;
+    background: #343638;
+    border: 1px solid #343638;
+    color: #fff;
+    letter-spacing: 1.8px;
+}
+
+footer {
+    background: #fff;
+}
+
+footer .container .footer-information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top:143px;
+    padding-bottom: 130px;
+}
+
+footer .container .footer-information div h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+footer .container .footer-information div p{
+    line-height: 24px;
+    color: #a4a4a4;
+}
+footer .container .footer-information div:nth-child(2) p{
+    line-height: 30px;
+}
+footer .container .footer-information div:nth-child(3) p{
+    line-height: 20px;
+    font-style: italic;
+}
+
+footer .container .footer-information div:nth-child(3) span{
+    color: #dbdbdb;
+}
+
+footer .container .footer-information div:nth-child(-n+3){
+    width:17.5%;
+}
+footer .container .footer-information div:nth-child(4){
+    width:23%;
+}
+
+
+footer .container .footer-information div:nth-child(4) form{
+    width: 100%;
+    margin: 28px 0 0 0;
+    display: flex;
+    align-items: center; 
+    flex-direction: row; 
+}
+
+footer .container .footer-information div:nth-child(4) form input{
+    width: 63%;
+    box-sizing: border-box;
+    padding: 17px 19px;
+    background: #f3f3f3;
+    border: 1px solid #343638;
+    font-style: italic;
+    color: #a4a4a4;
+}
+footer .container .footer-information div:nth-child(4) form button{
+    width: 37%;
+    box-sizing: border-box;
+    padding: 17px 0px;
+    background: #343638;
+    border: 1px solid #343638;
+    color: #fff;
+    letter-spacing: 1.3px;
+}
+
+footer .container .footer-nav {
+    border-top: 2px solid #f0f0f0;
+    padding: 18px 0;
+}
+
+footer .container .footer-nav p{
+    display: inline-block;
+    padding: 14px 0;
+    color: #a4a4a4;
+}
+
+footer .container .footer-nav nav ul{
+    margin: 0;
+}
+
+footer .container .footer-nav nav ul li{
+    float: left;
+    margin-left:32px;
+    padding: 14px 8px;
+}
+footer .container .footer-nav nav ul li a{
+    color: #000;
+}
+
+footer .container .footer-nav nav ul li.active{
+    border-bottom: 2px solid #b7c8d9;
+}
+
+footer .container .footer-navnav ul li:first-child{
+    margin-left:0;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
