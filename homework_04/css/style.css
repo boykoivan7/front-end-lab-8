@@ -77,6 +77,9 @@ header .container a.title-left {
     text-transform: uppercase;
     letter-spacing: 3px;
 }
+header .container a.title-left:hover {
+    color: #f0f0f0;
+}
 
 header .container nav ul{
     font-size: 14px;
@@ -183,12 +186,11 @@ section:nth-of-type(2) h2 {
 
 
 
-section:nth-of-type(2) .arlicles-block div .row img{
+section:nth-of-type(2) .arlicles-block div img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 60%, rgba(0, 0, 0, 0.5) 100%);
 }
 
 
@@ -210,14 +212,29 @@ section:nth-of-type(2) .arlicles-block .row div span.article-like{
     color: #fff;
     letter-spacing: 0.5px;
 }
+section:nth-of-type(2) .arlicles-block .row div span.article-like:hover{
+    background: #7b7b7b;
+}
 
 section:nth-of-type(2) .arlicles-block .row div span.article-description{
-    width: 100%;
-    position: absolute;
-    color: #fff;
 
-    left:35px;
-    bottom: 29px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 35px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 29px;
+    padding-top: 40px;
+    background: linear-gradient(rgba(255, 255, 255, 0), #343638);
+}
+
+section:nth-of-type(2) .arlicles-block .row div span.article-description:hover{
+    color: #ccc;
 }
 
 section:nth-of-type(2) .arlicles-block .row .big-block{
@@ -234,7 +251,7 @@ section:nth-of-type(2) .arlicles-block .row:first-child div{
     margin-bottom: 2.5%;
 }
 
-section:nth-of-type(2) .arlicles-block row::after{
+section:nth-of-type(2) .arlicles-block .row::after{
     display:block;
     content: "";
     clear:both; 
@@ -284,6 +301,10 @@ section:nth-of-type(2) .subscribe-block form button{
     border: 1px solid #343638;
     color: #fff;
     letter-spacing: 1.8px;
+}
+
+section:nth-of-type(2) .subscribe-block form button:hover{
+    background: #7b7b7b;
 }
 
 footer {
@@ -354,6 +375,10 @@ footer .container .footer-information div:nth-child(4) form button{
     letter-spacing: 1.3px;
 }
 
+footer .container .footer-information div:nth-child(4) form button:hover{
+    background: #7b7b7b;
+}
+
 footer .container .footer-nav {
     border-top: 2px solid #f0f0f0;
     padding: 18px 0;
@@ -376,6 +401,9 @@ footer .container .footer-nav nav ul li{
 }
 footer .container .footer-nav nav ul li a{
     color: #000;
+}
+footer .container .footer-nav nav ul li:hover a {
+    color: #ccc;
 }
 
 footer .container .footer-nav nav ul li.active{
