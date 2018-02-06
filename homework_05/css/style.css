@@ -121,7 +121,7 @@ section#banner .container #banner-text{
     width:380px;
 }
 
-section#banner .container #banner-text p{
+section#banner .container #banner-text h2{
     font-size:40px;
     line-height: 48px;
     color: #fff;
@@ -257,7 +257,7 @@ footer .container #footer-info p {
         width:460px;
     }
 
-    section#banner .container #banner-text p{
+    section#banner .container #banner-text h2{
         font-size: 25px;
         line-height: 29px;
         text-align: center;
@@ -344,7 +344,7 @@ footer .container #footer-info p {
         padding: 10px;
     }
     
-    section#banner .container #banner-text p{
+    section#banner .container #banner-text h2{
         font-size: 20px;
         line-height: 26px;
         text-align: left;
