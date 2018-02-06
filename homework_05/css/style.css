@@ -53,6 +53,7 @@ strong {
 }
 
 /* MY CODE */
+
 body{
     font: 14px/1.2 Arial, Helvetica, sans-serif;
     color: #333;
@@ -64,9 +65,11 @@ body{
     margin: 0 auto;
 }
 
+/* HEADER */
 header{
     background: #fff;
 }
+
 header .container .header-info{
     padding:20px 0 15px 0;
     display: flex;
@@ -83,10 +86,12 @@ header .container .header-info  a#logo{
 header .container .header-info nav {
     padding-top: 13px;
 }
+
 header .container .header-info nav ul li{
     display: inline;
     margin-right: 15px;
 }
+
 header .container .header-info nav ul li:last-child{
     margin-right: 0px;
 }
@@ -102,6 +107,7 @@ header .container .header-info nav ul li a:hover {
     color: #39c2d7;
 }
 
+/* BANNER */
 section#banner{
     background: url(../img/banner.jpg)/*center no-repeat*/;
     background-repeat:no-repeat;
@@ -111,9 +117,7 @@ section#banner{
 }
 
 section#banner .container #banner-text{
-    position: relative;
-    top: 50px;
-    left:0;
+    padding-top: 50px;
     width:380px;
 }
 
@@ -122,6 +126,8 @@ section#banner .container #banner-text p{
     line-height: 48px;
     color: #fff;
 }
+
+/* NEWS */
 section#news{
     background: #fff;
 }
@@ -132,6 +138,7 @@ section#news .container #news-block{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 section#news .container #news-block a {
     box-sizing: border-box;
     padding: 10px 10px 20px 10px;
@@ -141,33 +148,33 @@ section#news .container #news-block a {
     text-decoration: none;
     color: black;
     background: #ccc;
-  }
+}
 
-  section#news .container #news-block a:hover {
+section#news .container #news-block a:hover {
     background: #39c2d7;
 
-  }
+}
   
-  section#news .container #news-block a div {
+section#news .container #news-block a div {
     margin: 0;
     overflow: hidden;
-  }
+}
   
-  section#news .container #news-block a div h3 {
+section#news .container #news-block a div h3 {
     margin-top: 10px;
     margin-bottom: 4px;
     color: #333;
     font-size: 16px;
     font-weight: bold;
-  }
+}
 
-  section#news .container #news-block a div p {
+section#news .container #news-block a div p {
     margin: 0;
     padding: 0;
     color: #333;
-  }
+}
   
-  section#news .container #news-block a div img {
+section#news .container #news-block a div img {
     border: none;
     margin: 0 auto;
     max-width: 100%;
@@ -175,18 +182,18 @@ section#news .container #news-block a {
     display: block;
     background: #ccc;
     transition: transform .2s ease-in-out;
-  }
-  
+}
 
+/* FOOTER */
 footer {
     background: #39c2d7;
 }
+
 footer .container #footer-info {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     padding: 20px 0;
-
 }
 
 footer .container #footer-info nav{
@@ -211,87 +218,98 @@ footer .container #footer-info nav ul li:last-child{
     margin-right: 0px;
 }
 
-
 footer .container #footer-info p {
     color: #fff;
 }
 
 
-
 @media screen and (max-width: 899px) {
-    section#news .container #news-block a{
-        width: calc(50% - 10px);
-        padding: 10px 10px 20px 10px;
-    }
     .container {
         width: 100%;
         margin: 0 auto;
     }
-    
+
+    /*HEADER*/
     header .container .header-info{
         flex-direction:column;
         justify-content: center;
         align-items: center;
+        padding: 30px 0 15px 0;
     }
+
     header .container .header-info nav {
         padding-top: 20px;
         padding-bottom: 9px;
     }
+
     header .container .header-info  a#logo{
         margin-right: 0px;
     }
+
+    /*BANNER*/
     section#banner{
-        height: 530px;
+        height: 530px; 
     }
 
-    footer .container #footer-info {
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-        
-    }
-    footer .container #footer-info nav{
-        margin-right: 0;
-        padding-bottom: 19px;
-    }
     section#banner .container #banner-text{
-        top: 50px;
-        left: calc(50% - 230px);
+        padding-top: 50px;
+        padding-left: calc(50% - 230px);
         width:460px;
     }
+
     section#banner .container #banner-text p{
         font-size: 25px;
         line-height: 29px;
         text-align: center;
     }
+
+    /*NEWS*/
+    section#news .container #news-block a{
+        width: calc(50% - 10px);
+        padding: 10px 10px 20px 10px;
+    }
+
+    /*FOOTER*/
+    footer .container #footer-info {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;  
+    }
+
+    footer .container #footer-info nav{
+        margin-right: 0;
+        padding-bottom: 19px;
+    }
   }
   
 
   @media screen and (max-width: 574px) {
-    section#news .container #news-block a {
-      width: 100%;
-      padding: 10px;
-    }
     .container {
         width: 100%;
         margin: 0 auto;
     }
+
+    /*HEADER*/
     header .container .header-info  a#logo img{
         height: 36px;
         width: auto;
     }
+
     header .container {
         padding: 0px;
     }
+
     header .container .header-info{
         flex-direction:column;
         justify-content: center;
         align-items: center;
         padding:10px 0 0 0;
     }
+
     header .container .header-info  a#logo{
         margin-right: 0px;
     }
+
     header .container .header-info nav {
         padding-top: 4px;
         padding-bottom: 0px;
@@ -304,15 +322,41 @@ footer .container #footer-info p {
         padding: 10px 20px 9px 20px;
         border-top: 1px solid #ccc;
         background: #eee;
-    
     }
+
     header .container .header-info nav ul li:last-child{
         border-bottom: 1px solid #ccc;
     }
+
+    /*BANNER*/
     section#banner{
         height: 247px;
+        position: relative;
     }
 
+    section#banner .container #banner-text{
+        position: absolute;
+        box-sizing: border-box;
+        bottom: 20px;
+        left: 20px;
+        width: calc(100% - 40px);
+        background: #39c2d7;
+        padding: 10px;
+    }
+    
+    section#banner .container #banner-text p{
+        font-size: 20px;
+        line-height: 26px;
+        text-align: left;
+    }
+
+    /*NEWS*/
+    section#news .container #news-block a {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /*FOOTER*/
     footer .container #footer-info {
         flex-direction:column;
         justify-content: center;
@@ -326,25 +370,11 @@ footer .container #footer-info p {
         padding-bottom: 17px;
 
     }
+
     footer .container #footer-info nav ul li{
         display: block;
         margin-right: 0px;
         text-align: center;
         line-height: 20px;
-    }
-
-    section#banner .container #banner-text{
-        box-sizing: border-box;
-        top: 155px;
-        left: 0;
-        width:100%;
-        background: #39c2d7;
-        padding: 10px;
-    }
-    section#banner .container #banner-text p{
-        
-        font-size: 20px;
-        line-height: 26px;
-        text-align: left;
     }
   }
