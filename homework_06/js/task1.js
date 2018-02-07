@@ -2,7 +2,8 @@ var a = parseFloat(prompt("Please enter length of side a", ""));
 var b = parseFloat(prompt("Please enter length of side b", ""));
 var c = parseFloat(prompt("Please enter length of side c", ""));
 
-if (a > 0 && b > 0 && c > 0){
+
+if (a > 0 && b > 0 && c > 0 && a+b > c && a+c > b && b+c > a){
 
     /*Type of triangles:*/
     var type;
