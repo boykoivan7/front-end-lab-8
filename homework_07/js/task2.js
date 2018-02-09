@@ -3,10 +3,7 @@ var isPlay = confirm("Do you want to play a game?");
 if(isPlay) {
     var randomMin;
     var randomMax;
-    var firstPrize;
-    var secondPrize;
-    var thirdPrize;
-    var totalPrize;
+    var maxPrize;
     var randomNumber;
     var attemptsLeft;
     var possiblePrizeNow;
@@ -19,15 +16,13 @@ if(isPlay) {
 function startGame() {
     randomMin = 0;
     randomMax = 5;
-    firstPrize = 10;
-    secondPrize = 5;
-    thirdPrize = 2;
+    maxPrize = 10;
     totalPrize = 0;
     startRandom();
 }
 function startRandom() {
     attemptsLeft = 3;
-    possiblePrizeNow = firstPrize;
+    possiblePrizeNow = maxPrize;
     randomNumber = getRandomInt(randomMin, randomMax);
     enterNumber();
 }
@@ -40,21 +35,12 @@ function enterNumber() {
 
 function checkNumber() {
     if (number == randomNumber) {
-        if(attemptsLeft == 3){
-            totalPrize += firstPrize;
-        } else if(attemptsLeft == 2){
-            totalPrize += secondPrize;
-        } else if(attemptsLeft == 1){
-            totalPrize += thirdPrize;
-        }
+        totalPrize += possiblePrizeNow;
 
         var isContinue = confirm("You win!!! Do you want to continue a game?");
         if(isContinue) {
-            randomMin *= 2;
             randomMax *= 2;
-            firstPrize *= 3;
-            secondPrize *= 3;
-            thirdPrize *= 3;
+            maxPrize *= 3;
             startRandom();
         } else {
             console.log("Thank you for a game. Your prize is: " + totalPrize + "$");
@@ -65,21 +51,17 @@ function checkNumber() {
         }
     }
     else {
-        if(attemptsLeft == 3){
-            attemptsLeft--;
-            possiblePrizeNow = secondPrize;
-            enterNumber();
-        } else if(attemptsLeft == 2){
-            attemptsLeft--;
-            possiblePrizeNow = thirdPrize;
-            enterNumber();
-        } else if(attemptsLeft == 1){
+        if(attemptsLeft == 1){
             console.log("Thank you for a game. Your prize is: " + totalPrize + "$");
             var isTryAgain = confirm("Do you want to try again?");
             if(isTryAgain){
                 startGame();
             }
-        }
+        } else {
+            attemptsLeft--;
+            possiblePrizeNow = Math.floor(possiblePrizeNow/2);
+            enterNumber();
+        } 
     }
 }
 
