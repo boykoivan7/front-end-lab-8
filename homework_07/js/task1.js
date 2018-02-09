@@ -1,6 +1,7 @@
-var number = parseInt(prompt("Enter natural number N (0<N<=20)", ""));
-
-if (number > 0 && number <= 20) {
+var numberString = prompt("Enter natural number N (0<N<=20)", "");
+var checkNumber = !isNaN(parseFloat(numberString)) && isFinite(numberString) && Number.isInteger(parseFloat(numberString)) && parseFloat(numberString) > 0 && parseFloat(numberString) <= 20 ;
+if (checkNumber) {
+	var number = parseInt(numberString);
     var symbol = "[~]";
     var empty = "   ";
     var string = "";
