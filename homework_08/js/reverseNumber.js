@@ -8,3 +8,16 @@ function reverseNumber(number) {
     }
     return reversed;
 }
+
+/* 2 method 
+function reverseNumber(number)
+{
+	var isUnder = number >= 0;
+	number = Math.abs(number) + "";
+	if(isUnder){
+		return number.split("").reverse().join("")*1;
+	}
+	else {
+		return number.split("").reverse().join("")*-1;
+		}
+}*/
