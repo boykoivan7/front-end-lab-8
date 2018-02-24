@@ -32,9 +32,8 @@ function createTree(data) {
 var list = document.createElement('ul');
 list.innerHTML = createTree(structure);
 
-rootNode.appendChild(list);
 
-var a = rootNode.querySelectorAll("a");
+var a = list.querySelectorAll("a");
 
 for (var i=0; i< a.length; i++) {
 	a[i].onclick = function() {
@@ -52,5 +51,7 @@ for (var i=0; i< a.length; i++) {
         }
     }
 }
+
+rootNode.appendChild(list);
 
 
