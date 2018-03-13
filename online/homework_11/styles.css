@@ -1,0 +1,48 @@
+* {
+    margin:0;
+}
+
+body {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.material-icons {
+    vertical-align: bottom;
+    font-size: 18px;
+}
+.material-icons.orange {
+    color: #edbc0b;
+}
+
+.material-icons.grey {
+    color: #bbb;
+}
+
+ul {
+    margin-left: 10px;
+    padding-left: 0; 
+}
+
+li {
+    list-style-type: none;
+}
+
+li a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+}
+
+li a:hover {
+    background-color: #efefef;
+}
+
+ul.empty {
+    margin-left:0;
+    font-style: italic;
+}
+
+#root > ul:first-child {
+    margin:0;
+}

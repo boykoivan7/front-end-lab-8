@@ -1,0 +1,203 @@
+@mixin imgStyle($floatImage,$leftMargin,$rightMargin){
+    float: $floatImage;
+    margin: 4px $rightMargin 10px $leftMargin;
+    outline: 2px solid $hColor;
+    outline-offset: 2px; 
+}
+
+@mixin hStyle($fontSize,$textAlign,$leftMargin,$rightMargin){
+    font-size: $fontSize;
+    font-weight: 700;
+    text-align: $textAlign;
+    color: $hColor;
+    margin: $leftMargin 0 $rightMargin;
+}
+
+
+/* RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* MY CODE */
+body{
+    background-color: $bodyBackground;
+    font: 16px/18px 'Times New Roman', serif;
+    color: $bodyColor;
+}
+
+#content{
+    width: 960px;
+    margin: 8px auto;
+    padding: 20px;
+    background-color: $contentBackground;
+}
+
+h1 {
+    @include hStyle(31px,center,9px,30px);
+    text-transform: $h1TextTransform;
+}
+
+h2 {
+    @include hStyle(24px,left,20px,25px);
+}
+
+p {
+    margin: 6px 0 16px;
+}
+
+.img-left{
+    @include imgStyle(left,5px,23px);
+}
+
+.img-right{
+    @include imgStyle(right,23px,5px);
+}
+
+.brief {
+    background-color: $briefColor;
+    width: $briefWidth;
+    float: $briefFloat;
+    margin: $briefMargin;
+    padding: 20px;
+    font-size: 16px;
+    color: $briefTextColor;
+}
+
+a {
+    color: $linkColor;
+    
+    &:hover {
+        color: lighten($linkColor, 25%);
+    }
+}
+
+
+table {
+    margin-bottom: 64px;
+    
+    caption {
+        text-align: right;
+	    color: #000;
+    }
+    
+    tr {
+        
+        th {
+            background-color: $thColor;
+            padding: 10px 10px 10px 20px;
+            border-right: 1px solid #fff;
+            text-align: left;
+            text-transform: uppercase;
+            color: $tableThColor;
+        }
+        
+        th:last-child {
+            border-right: none;
+        }
+
+        td {
+            border-bottom: 1px solid $thColor;
+            padding: 10px 10px 10px 20px;
+            background-color: $tableRowsColor;
+        }
+    }    
+}
+
+form {
+    width:100%;
+    text-transform: uppercase;
+    color: $formTextColor;
+    margin-bottom: 10px;
+    
+    input, textarea {
+        border: 1px solid $borderFormColor;
+        width: 100%;
+        padding: 5px;
+        color: $formInputColor;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        outline-color: $FormOutlineColor;
+    }
+    
+    label{
+        display: inline-block;
+    }
+    
+    .userNames {
+        display: flex;
+    }
+    
+    .userNames > div {
+        width: 470px;  
+    }
+    
+    .userNames > div:first-child {
+        margin-right: 20px;       
+    }
+    
+    button {
+        padding: 10px 63px;
+        background-color: $contentBackground;
+        border: 1px solid $buttonColor;
+        color: $buttonColor;
+        margin-top:5px;
+        margin-bottom:5px;
+        text-transform: uppercase;
+        font-family: Arial;
+        font-size: 20px;
+        
+        &:hover{
+            background-color: lighten($buttonColor, 25%);
+            color: $contentBackground;
+        }
+        
+        &:active{
+            background-color: darken($buttonColor, 25%);
+            color: $contentBackground;
+        }
+    }
+    
+}
