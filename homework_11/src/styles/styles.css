@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ECE9E6;
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    font-family: 'Open Sans', sans-serif;
+    color: #444;
+    font-size: 18px;
+}
+
+#root {
+    width: 500px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+#buttons button {
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    -ms-transition: background-color .25s ease-in-out;
+    transition: background-color .25s ease-in-out;
+    -webkit-appearance: none;
+    position: relative;
+    display: inline-block;
+    background: #e95d3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    padding: 6px;
+    text-transform: uppercase;
+    font-size: 36px;
+    width: calc((100% - 15px) / 4);
+    margin-right: 5px;
+}
+
+#buttons button:last-child {
+    margin-right: 0;
+}
+
+
+
+#buttons button:hover {
+    background: #de3d27
+}
+
+#buttons button:active {
+    background: #f16c14
+}
+
+#numbers input[type="text"] {
+    -webkit-appearance: none;
+    display: inline-block;
+    width: calc(50% - 5px);
+    font-size: 16px;
+    border-radius: 8px;
+    border: solid 1px #eee;
+    margin-bottom: 5px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px
+}
+
+#numbers input[type="text"]:first-child {
+    float: left;
+}
+
+#numbers input[type="text"]:last-child {
+    float: right;
+}
+
+#numbers input[type="text"]:focus {
+    outline: 0;
+    border-color: #e95d3c
+}
+
+.message {
+    margin: 10px 0px;
+    position: relative;
+    padding: 12px 20px;
+    margin-bottom: 16px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.message-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.message-error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
