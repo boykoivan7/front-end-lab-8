@@ -1,0 +1,14 @@
+.filter {
+    float: left;
+
+    & > input{
+        font-size: 24px;
+        color: $black;
+        height: 40px;
+        border: none;
+
+        &::placeholder{
+            color: $grey;
+        }
+    }
+}
