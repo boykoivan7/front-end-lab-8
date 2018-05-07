@@ -49,16 +49,18 @@ class App extends Component {
   }
 
   addColor (color) {
-    var avaibleColors = [...this.state.avaibleColors];
-    var indexAvaible = avaibleColors.indexOf(color);
-    avaibleColors.splice(indexAvaible, 1);
-
-    this.setState({
-      selectedColors: [...this.state.selectedColors, color],
-      avaibleColors: avaibleColors,
-    }, () => {
-      this.filterSearch();
-    })
+    if(this.state.selectedColors.length < 10) {
+      var avaibleColors = [...this.state.avaibleColors];
+      var indexAvaible = avaibleColors.indexOf(color);
+      avaibleColors.splice(indexAvaible, 1);
+  
+      this.setState({
+        selectedColors: [...this.state.selectedColors, color],
+        avaibleColors: avaibleColors,
+      }, () => {
+        this.filterSearch();
+      })
+    }
   }
 
   removeColor (color) {
@@ -90,14 +92,14 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.avaibleColors.length > 0 ?
-        <React.Fragment>
           <div className="header">
             <Filter handleSearch={this.handleSearch} />
             <SelectedColors colors={this.state.selectedColors.slice(
             this.state.selectedColors.length > 5 ? this.state.selectedColors.length-5 : 0 , 
             this.state.selectedColors.length)} removeColor={this.removeColor}/>
           </div>
+        {this.state.avaibleColors.length > 0 ?
+        <React.Fragment>
           <AmountOfColorItems amount={this.state.displayedColors.length}/>
           <ListOfAvailableColorItems colors={this.state.displayedColors} addColor={this.addColor} />
          </React.Fragment>
