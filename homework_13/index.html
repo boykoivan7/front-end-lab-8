@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="lib/angular.min.js"></script>
+    <script src="src/app.js"></script>
+    <script src="src/data.js"></script>
+    <link rel="stylesheet" href="css/styles.css" >
+</head>
+<body ng-controller="MyCtrl as $MyCtrl">
+    <!-- <div ng-repeat="post in demo.clientId">
+        <h1>{{post.title}}</h1>
+        <h3>{{post.description}}</h3>
+
+        <ul ng-repeat="tag in post.tags">
+            <li>{{tag}}</li>
+        </ul>
+    </div> -->
+    <h1>My blog</h1>
+    <div class="container">
+        <div class="main-section">
+            <div class="blog-post" ng-repeat="post in $MyCtrl.posts | filter: $MyCtrl.filter">
+                <div class="view-container" ng-hide="post.viewEdit">
+                    <div class="photo">
+                        <img ng-src="assets/{{post.photo}}" alt="{{post.title}}">
+                        <div class="title">{{post.title}}</div>
+                    </div>
+                    <div class="categories" >
+                        <span ng-repeat="category in post.categories" ng-click="$MyCtrl.filter.categories = category">{{category}}</span>
+                    </div>
+                    <div class="desc">{{post.description}}</div>
+                    <div class="edit-button" ng-click="$MyCtrl.showEdit(post)">Edit</div>
+                </div>
+                <div class="add-form" ng-hide="!post.viewEdit">
+                    <div class="header">
+                        <button class="cancel-button" ng-click="$MyCtrl.showView(post)">Back</button>
+                        <h2>Edit post</h2>
+                    </div>
+                    <div class="label">
+                        <div class="title">Title *</div>
+                        <input type="text" placeholder="Title" ng-model="post.edited.title">
+                    </div>
+                    <div class="label">
+                        <div class="title">Categories *</div>
+                        <input type="text" placeholder="Categories" ng-model="post.edited.categories">
+                    </div>
+                    <div class="label">
+                        <div class="title">Description *</div>
+                        <textarea placeholder="Description" ng-model="post.edited.description"></textarea>
+                    </div>
+                    <div class="label">
+                        <div class="title">Photo</div>
+                        <input type="text" placeholder="Photo" ng-model="post.edited.photo">
+                    </div>
+                    <button class="add-button" ng-click="$MyCtrl.editPost(post, post.edited.title, post.edited.categories, post.edited.description, post.edited.photo)">Add</button>
+                    <p class="error-message" ng-show="post.edited.isEditError">Please fill all required fields</p>
+                </div>  
+            </div>
+            
+            <button class="add-post-button" ng-hide="$MyCtrl.addActive" ng-click="$MyCtrl.toggleAddActive()">Add Post</button>
+            <div class="blog-post" ng-hide="!$MyCtrl.addActive">
+                <div class="add-form">
+                        <div class="header">
+                            <button class="cancel-button" ng-click="$MyCtrl.toggleAddActive()">Back</button>
+                            <h2>Add post</h2>
+                        </div>
+                        <div class="label">
+                            <div class="title">Title *</div>
+                            <input type="text" placeholder="Title" ng-model="$MyCtrl.newInputsPost.title" >
+                        </div>
+                        <div class="label">
+                            <div class="title">Categories *</div>
+                            <input type="text" placeholder="Categories" ng-model="$MyCtrl.newInputsPost.categories" >
+                        </div>
+                        <div class="label">
+                            <div class="title">Description *</div>
+                            <textarea placeholder="Description" ng-model="$MyCtrl.newInputsPost.desc"></textarea>
+                        </div>
+                        <div class="label">
+                            <div class="title">Photo</div>
+                            <input type="text" placeholder="Photo" ng-model="$MyCtrl.newInputsPost.photo" >
+                        </div>
+                      <button class="add-button" ng-click="$MyCtrl.addNewPost($MyCtrl.newInputsPost.title, $MyCtrl.newInputsPost.categories, $MyCtrl.newInputsPost.desc, $MyCtrl.newInputsPost.photo)">Add</button>
+                      <p class="error-message" ng-show="$MyCtrl.isAddError">Please fill all required fields</p>
+                </div>  
+          </div>
+
+        </div>
+        <div class="right-sidebar">
+            <h2>Categories</h2>
+            <ul>
+                <li ng-if="$MyCtrl.posts.length > 0" ng-click="$MyCtrl.filter.categories = ''" >All</li>
+                <li ng-repeat="category in $MyCtrl.getUniqueCategories()" ng-click="$MyCtrl.filter.categories = category">{{category}}</li>
+            </ul>
+            <h2>Search by title</h2>
+            <input type="text" placeholder="blog title" ng-model="$MyCtrl.filter.title">
+        </div>
+    </div>
+  </body>
+</html>
