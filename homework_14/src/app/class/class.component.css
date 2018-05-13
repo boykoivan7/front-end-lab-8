@@ -1,0 +1,39 @@
+td {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 0px;
+    height: 24px;
+}
+
+td:nth-child(1) {
+    width: 5%;
+}
+
+td:nth-child(n+2):nth-child(-n+5) {
+    width: calc(95% / 4);
+}
+
+td input {
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    background-color: inherit;
+    color: inherit;
+    text-align: center;
+}
+
+td input:focus {
+    outline: none;
+}
+
+td  span{
+    width: 20px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin: 0 5px;
+}

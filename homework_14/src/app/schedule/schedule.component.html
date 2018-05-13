@@ -1,0 +1,24 @@
+<div class="schedule-container">
+  <div class="header">
+      <h2>Epam FE Lab #8</h2>
+      <button class="add-button" (click)="addClassClick()">Add</button>
+      <table>
+          <tr>
+              <th>#</th>
+              <th>Topic</th>
+              <th>Date</th>
+              <th>Lecturer</th>
+              <th>Actions</th>
+          </tr>
+          <tr 
+            *ngFor="let class of classes; index as i"
+            app-class 
+            [myClass]="class" 
+            (myClassChange)="updateFromChild($event, class)"
+            [index]="i+1"
+            [deleteClass]="deleteClass"
+
+          ></tr>
+      </table>
+  </div>
+</div>

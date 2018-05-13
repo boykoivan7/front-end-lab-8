@@ -1,0 +1,53 @@
+.schedule-container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.header {
+    position: relative;
+    height: 25px;
+}
+
+.header h2 {
+    text-align: center;
+}
+
+.header .add-button {
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 50px;
+    height: 20px;
+    background: inherit;
+    border: 1px solid #000;
+    color: #000;
+    cursor: pointer;
+}
+
+.header .add-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.header .add-button:focus {
+    outline: none;
+}
+
+table {
+    width: 100%;
+    margin: 10px 0;
+    border-collapse:collapse;
+    background-color: #fff;
+}
+
+th {
+    border: 1px solid #ccc;
+}
+
+th:nth-child(1) {
+    width: 5%;
+}
+
+th:nth-child(n+2):nth-child(-n+5) {
+    width: calc(95% / 4);
+}

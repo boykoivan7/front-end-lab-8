@@ -1,0 +1,15 @@
+
+  <td>{{index}}</td>
+  <!--Topic-->
+  <td *ngIf="!editing">{{myClass.topic}}</td>
+  <td *ngIf="editing"><input type="text" [(ngModel)]="edited.topic"></td>
+  <!--Date-->
+  <td *ngIf="!editing">{{myClass.date}}</td>
+  <td *ngIf="editing"><input type="text" [(ngModel)]="edited.date"></td>
+  <!--Lecturer-->
+  <td *ngIf="!editing">{{myClass.lecturer}}</td>
+  <td *ngIf="editing"><input type="text" [(ngModel)]="edited.lecturer"></td>
+  <!--Actions-->
+  <td *ngIf="!editing"><span (click)="showEditMode()">&#10000;</span><span (click)="deleteClass(myClass)">&#x2326;</span></td>
+  <td *ngIf="editing"><span (click)="saveEditMode()">&#10003;</span><span (click)="cancelEditMode()">&#10005;</span></td>
+
